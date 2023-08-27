@@ -10,3 +10,21 @@
 body {
   background-color: antiquewhite;
 }
+
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.counter1, .counter2 {
+  color: #FFF;
+  background-color: crimson;
+  padding: .4rem;
+}
+
+button {
+  color: #FFF;
+  background-color: blue;
+  padding: .4rem;
+}
