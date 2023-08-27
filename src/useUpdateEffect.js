@@ -1,15 +1,15 @@
 import { useEffect, useRef } from "react";
 
-const useUpdateEffect = (callback, dependencies) => {
-  const updateRef = useRef(true);
+const useUpdateEffect = (callback, dependency) => {
+  const firstTimeUpdateRef = useRef(true);
 
   useEffect(() => {
-    if (updateRef) {
-      updateRef = false;
+    if (firstTimeUpdateRef.current) {
+      firstTimeUpdateRef.current = false;
       return;
     }
     return callback;
-  }, [dependencies]);
+  }, dependency);
 };
 
 export default useUpdateEffect;
